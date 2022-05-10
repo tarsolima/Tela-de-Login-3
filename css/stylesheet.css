@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: url('../img/img1.png') center bottom repeat-x, url('../img/img2.png');
+    background-color: rgb(11, 10, 13);
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    max-width: 32.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    margin-top: 22px;
+}
+
+.box h1 {
+    color: #fff;
+    margin-bottom: 17px;
+}
+
+.box h1 .fa-jedi-order {
+    color: #fff;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.container-form {
+    position: relative;
+}
+
+[type="email"], [type="password"]  {
+    display: block;
+    width: 360px;
+    height: 50px;
+    font-size: 0.875em;
+    margin: 15px auto;
+    padding: 15px 15px 15px 42px;
+    background: rgb(25, 24, 31);
+    border-radius: 5px;
+    outline: 0px;
+    border: 2px solid rgb(40, 39, 44);
+    color: #fff;
+    transition: border 0.2s ease 0s;
+}
+
+.fas {
+    color:  rgb(51, 48, 64);
+    position: absolute;
+    left: 18px;
+    top: 19px;
+    font-size: 14px;
+    transition: color 0.2s ease 0s;
+}
+
+[type="email"]:focus, [type="password"]:focus  {
+    border: 2px solid rgb(113, 89, 193);
+} 
+
+[type="email"]:focus + .fa-envelope, [type="password"]:focus + .fa-lock  {
+    color: rgb(113, 89, 193);
+} 
+
+a {
+    text-decoration: none;
+    color: rgb(113, 89, 193);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 8px 0px 18px 0px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease 0s;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+[type="submit"] {
+    display: block;
+    width: 360px;
+    height: 50px;
+    margin: 13px auto 10px auto;
+    font-size: 1em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.35);
+    background: rgb(65, 53, 107) none repeat scroll 0% 0%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+[type="submit"]:hover {
+    background-color:rgb(113, 89, 193);
+    color: #fff;
+}
+
+.conta {
+    margin-top: 24px;
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    text-align: center;
+}
+
+.ou {
+    position: relative;
+    margin: 24px 0px;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(135, 134, 139);
+}
+
+.ou::before {
+    left: 0px
+}
+
+.ou::after {
+    right: 0px
+}
+
+.ou::after, .ou::before {
+    content: "";
+    width: calc(50% - 25px);
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    background: rgb(40, 39, 47) none repeat scroll 0% 0%;
+}
+
+.git {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: rgb(113, 89, 193) none repeat scroll 0% 0%;
+    border-radius: 5px;
+    border: none;
+}
+
+.fa-github {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer {
+    color: rgb(68, 67, 75);
+    font-size: 12px;
+}
+
+@media (max-width: 423px) {
+    .box {
+        max-width: 300px;
+    }
+
+    [type="email"], [type="password"], [type="submit"], .git {
+        width: 305px;
+    }
+}
